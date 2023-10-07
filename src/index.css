@@ -3,3 +3,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.img:after {
+  content: "";
+  width: 90%;
+  position: absolute;
+  top: -5%;
+  bottom: -10%;
+  left: 0;
+  background-image: url(images/dots.png);
+  background-repeat: repeat;
+  z-index: -1;
+}
+
+.img:before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  right: 0;
+  left: 50px;
+  bottom: 0;
+  border: 10px solid #f4a492;
+  z-index: -1;
+}
