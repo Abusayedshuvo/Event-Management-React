@@ -1,0 +1,55 @@
+{
+  
+    "events": [
+      {
+        "id": 1,
+        "name": "Elegant Wedding Bliss",
+        "image": "https://i.ibb.co/xG66hGv/01.jpg",
+        "price": "$10,000",
+        "shortDescription": "Transform your dreams into a breathtaking reality with our exquisite wedding planning services.",
+        "buttonText": "Explore"
+      },
+      {
+        "id": 2,
+        "name": "Whimsical Garden Wedding",
+        "image": "https://i.ibb.co/TrQHxG8/02.jpg",
+        "price": "$12,000",
+        "shortDescription": "Create magical moments surrounded by the beauty of nature in our enchanting garden wedding package.",
+        "buttonText": "Discover"
+      },
+      {
+        "id": 3,
+        "name": "Timeless Love Celebration",
+        "image": "https://i.ibb.co/RbTGkKc/03.jpg",
+        "price": "$5,000",
+        "shortDescription": "Mark the years of love with an anniversary celebration that captures the essence of your journey together.",
+        "buttonText": "View Options"
+      },
+
+       {
+        "id": 4,
+        "name": "Joyful Birthday Extravaganza",
+        "image": "https://i.ibb.co/VYFhTwR/04.jpg",
+        "price": "$800",
+        "shortDescription": "Celebrate another trip around the sun with a birthday bash that's filled with laughter and joy.",
+        "buttonText": "Discover"
+      },
+      {
+        "id": 5,
+        "name": "Superhero-Themed Birthday",
+        "image": "https://i.ibb.co/84d4k8J/05.jpg",
+        "price": "$600",
+        "shortDescription": "Host an epic birthday party with our superhero-themed package for an unforgettable experience.",
+        "buttonText": "Explore Themes"
+      },
+      {
+        "id": 6,
+        "name": "Sweet Sixteen Celebration",
+        "image": "https://i.ibb.co/FnLgZhj/06.jpg",
+        "price": "$1,200",
+        "shortDescription": "Make turning sixteen a sweet memory with our specially curated celebration package.",
+        "buttonText": "See Options"
+      }
+
+    ] 
+}
