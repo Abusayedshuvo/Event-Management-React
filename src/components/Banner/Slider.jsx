@@ -18,8 +18,8 @@ const Slider = ({ slider }) => {
           }}
         >
           <div className="text-center space-y-5 text-white">
-            <h2 className="text-7xl font-medium">{title}</h2>
-            <p className="text-4xl">{subtitle}</p>
+            <h2 className="text-4xl lg:text-7xl font-medium">{title}</h2>
+            <p className="text-2xl lg:text-4xl">{subtitle}</p>
             <button className="bg-[#f4a492] hover:bg-[#9accc9] text-white px-7 py-4 rounded-full ease-in-out duration-300">
               {btn}
             </button>

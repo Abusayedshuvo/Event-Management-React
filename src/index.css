@@ -26,3 +26,18 @@
   border: 10px solid #9accc9;
   z-index: -1;
 }
+
+.navbar li a:hover {
+  background-color: transparent;
+  color: #f4a492;
+}
+
+.navbar li a:focus {
+  background-color: transparent;
+}
+
+.navbar li a.active {
+  color: #f4a492 !important;
+  background-color: transparent !important;
+  font-weight: 600;
+}

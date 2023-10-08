@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <div className="bg-slate-100 py-20">
       <div className="container mx-auto">
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div>
             <p className="text-2xl text-[#f4a492] font-semibold mb-5">
               Celebrate Hub
@@ -59,15 +59,30 @@ const Footer = () => {
               <p className="text-2xl font-semibold mb-7">Company Info</p>
               <ul className="space-y-3">
                 <li>
-                  <Link className="flex gap-2 hover:text-[#f4a492]  items-center">
+                  <Link
+                    to="/"
+                    className="flex gap-2 hover:text-[#f4a492]  items-center"
+                  >
                     <FaCaretRight />
                     <span>Home</span>
                   </Link>
                 </li>
                 <li>
-                  <Link className="flex gap-2 hover:text-[#f4a492]  items-center">
+                  <Link
+                    to="/about"
+                    className="flex gap-2 hover:text-[#f4a492]  items-center"
+                  >
                     <FaCaretRight />
                     <span>About</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/blog"
+                    className="flex gap-2 hover:text-[#f4a492]  items-center"
+                  >
+                    <FaCaretRight />
+                    <span>Blog</span>
                   </Link>
                 </li>
               </ul>

@@ -3,14 +3,14 @@ import aboutImg from "../../assets/about.jpg";
 const About = () => {
   return (
     <div className="container mx-auto py-20">
-      <div className="grid grid-cols-5 gap-8">
+      <div className="grid lg:grid-cols-5 gap-8">
         <div className="relative col-span-2">
           <div className="img p-10">
             <img src={aboutImg} alt="" />
           </div>
         </div>
         <div className="col-span-3 my-auto">
-          <div className="ps-10">
+          <div className="ps-10 mt-10 md:mt-0">
             <h2 className="text-5xl font-semibold mb-5">Our Story</h2>
             <p className="text-3xl mb-5">Crafting Moments, Creating Memories</p>
             <p className="mb-3">

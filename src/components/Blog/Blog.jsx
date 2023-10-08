@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const Blog = () => {
   return (
     <div className="container mx-auto mb-20">
-      <h2 className="text-5xl font-semibold text-center mb-10">Lates Blog</h2>
-      <div className="grid grid-cols-2 gap-10">
+      <h2 className="text-5xl font-semibold text-center mb-10">Latest Blog</h2>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="relative">
           <img src="https://i.ibb.co/FnLgZhj/06.jpg" alt="" />
           <p className="text-2xl font-semibold my-5">

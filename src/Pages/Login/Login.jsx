@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
 import Swal from "sweetalert2";
@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 const Login = () => {
   const { loginUser, googleLogin, githubLogin } = useContext(AuthContext);
   const navigate = useNavigate();
+  const [error, setError] = useState("");
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -18,7 +19,7 @@ const Login = () => {
         navigate("/");
       })
       .catch((error) => {
-        console.log(error);
+        setError(error.message);
       });
   };
 
@@ -28,7 +29,7 @@ const Login = () => {
         Swal.fire("Google Login Success ful!", "", "success");
       })
       .catch((error) => {
-        console.log(error);
+        setError(error.message);
       });
   };
 
@@ -38,7 +39,7 @@ const Login = () => {
         Swal.fire("Git Hub Login Success ful!", "", "success");
       })
       .catch((error) => {
-        console.log(error);
+        setError(error.message);
       });
   };
 
@@ -73,10 +74,12 @@ const Login = () => {
               />
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
+              <button className="btn  bg-[#f4a492] hover:bg-[#9accc9] text-white">
+                Login
+              </button>
             </div>
           </form>
-          <div className="px-10 py-4">
+          <div className="px-10 py-4 text-center space-x-3">
             <button onClick={handleGoogleLogin} className="btn">
               Google
             </button>
@@ -95,6 +98,11 @@ const Login = () => {
                 Sing Up!
               </Link>
             </p>
+          </div>
+          <div>
+            {error && (
+              <p className="text-red-600 ps-10 pb-5 font-semibold"> {error}</p>
+            )}
           </div>
         </div>
       </div>

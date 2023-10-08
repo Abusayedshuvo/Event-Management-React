@@ -1,25 +1,39 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
 import Swal from "sweetalert2";
 
 const Registration = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, updatePro } = useContext(AuthContext);
+  const [error, setError] = useState("");
 
   const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
+    if (password.length < 6) {
+      setError("Password at lest 6 charter");
+      return;
+    } else if (!/^(?=.*[A-Z])(?=.*[@#$%^&+=]).*$/.test(password)) {
+      setError("Password need a capital letter and a special character");
+      return;
+    }
+    setError("");
     createUser(email, password)
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
         Swal.fire("Registration Success!", "", "success");
         e.target.reset();
       })
       .catch((error) => {
-        console.log(error);
+        setError(error.message);
       });
+
+    /* updatePro(name)
+      .then((result) => console.log(result.message))
+      .catch((error) => {
+        console.log(error);
+      }); */
   };
 
   return (
@@ -46,7 +60,7 @@ const Registration = () => {
               </label>
               <input
                 type="email"
-                placeholder="email"
+                placeholder="Email"
                 name="email"
                 className="input input-bordered"
                 required
@@ -58,7 +72,7 @@ const Registration = () => {
               </label>
               <input
                 type="password"
-                placeholder="password"
+                placeholder="Password"
                 name="password"
                 className="input input-bordered"
                 required
@@ -70,13 +84,18 @@ const Registration = () => {
               </button>
             </div>
           </form>
-          <div className="px-10 pb-10">
+          <div className="px-10 pb-5">
             <p>
               Already have account ?
               <Link className="text-blue-500 font-medium ps-2" to="/login">
                 Login!
               </Link>
             </p>
+          </div>
+          <div>
+            {error && (
+              <p className="text-red-600 ps-10 pb-5 font-semibold"> {error}</p>
+            )}
           </div>
         </div>
       </div>

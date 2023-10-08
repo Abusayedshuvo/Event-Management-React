@@ -4,21 +4,25 @@ import { AuthContext } from "../../context/AuthProvider";
 import Swal from "sweetalert2";
 
 const Navbar = () => {
+  const { logOut, user } = useContext(AuthContext);
   const navLinks = (
     <>
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
-      <li>
-        <NavLink to="/about">About</NavLink>
-      </li>
-      <li>
-        <NavLink to="/blog">Blog</NavLink>
-      </li>
+      {user && (
+        <>
+          <li>
+            <NavLink to="/about">About</NavLink>
+          </li>
+          <li>
+            <NavLink to="/blog">Blog</NavLink>
+          </li>
+        </>
+      )}
     </>
   );
 
-  const { logOut, user } = useContext(AuthContext);
   const handleLogOut = () => {
     logOut()
       .then(() => Swal.fire("Log out Success!", "", "success"))
