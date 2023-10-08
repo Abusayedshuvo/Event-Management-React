@@ -70,9 +70,19 @@ const Navbar = () => {
           </div>
           <div className="navbar-end">
             {user ? (
-              <button onClick={handleLogOut} className="btn ">
-                Log Out
-              </button>
+              <>
+                <p className="pe-3 font-medium">{user?.displayName}</p>
+                <img
+                  className="w-10 h-10 rounded-full"
+                  src={user?.photoURL}
+                  alt=""
+                />
+                {console.log(user)}
+                {console.log(user.photoURL)}
+                <button onClick={handleLogOut} className="btn ">
+                  Log Out
+                </button>
+              </>
             ) : (
               <Link className="btn" to="/login">
                 Login
