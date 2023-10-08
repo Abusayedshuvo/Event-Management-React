@@ -7,11 +7,15 @@ import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import Registration from "./Pages/Registration/Registration";
 import ServicesDetails from "./Pages/ServicesDetails/ServicesDetails";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage";
+import Blogs from "./Pages/Blogs/Blogs";
+import AboutPage from "./Pages/About/AboutPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -29,6 +33,14 @@ const router = createBrowserRouter([
       {
         path: "/services/:id",
         element: <ServicesDetails></ServicesDetails>,
+      },
+      {
+        path: "/blog",
+        element: <Blogs></Blogs>,
+      },
+      {
+        path: "/about",
+        element: <AboutPage></AboutPage>,
       },
     ],
   },
