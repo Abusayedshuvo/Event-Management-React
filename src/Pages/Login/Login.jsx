@@ -1,10 +1,11 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
 import Swal from "sweetalert2";
 
 const Login = () => {
-  const { loginUser } = useContext(AuthContext);
+  const { loginUser, googleLogin, githubLogin } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -12,8 +13,29 @@ const Login = () => {
     const password = e.target.password.value;
     loginUser(email, password)
       .then((result) => {
-        console.log(result.user);
         Swal.fire("Log In Success!", "", "success");
+        e.target.reset();
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then((result) => {
+        Swal.fire("Google Login Success ful!", "", "success");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const handleGithubLogin = () => {
+    githubLogin()
+      .then((result) => {
+        Swal.fire("Git Hub Login Success ful!", "", "success");
       })
       .catch((error) => {
         console.log(error);
@@ -54,6 +76,15 @@ const Login = () => {
               <button className="btn btn-primary">Login</button>
             </div>
           </form>
+          <div className="px-10 py-4">
+            <button onClick={handleGoogleLogin} className="btn">
+              Google
+            </button>
+            <button onClick={handleGithubLogin} className="btn">
+              GitHub
+            </button>
+          </div>
+
           <div className="px-10 pb-10">
             <p>
               New to ?

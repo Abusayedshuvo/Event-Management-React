@@ -15,6 +15,7 @@ const Registration = () => {
       .then((result) => {
         console.log(result.user);
         Swal.fire("Registration Success!", "", "success");
+        e.target.reset();
       })
       .catch((error) => {
         console.log(error);
