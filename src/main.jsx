@@ -11,6 +11,7 @@ import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 import Blogs from "./Pages/Blogs/Blogs";
 import AboutPage from "./Pages/About/AboutPage";
 import AuthProvider from "./context/AuthProvider";
+import PrivateRoutes from "./routes/PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -33,7 +34,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/services/:id",
-        element: <ServicesDetails></ServicesDetails>,
+        element: (
+          <PrivateRoutes>
+            <ServicesDetails></ServicesDetails>
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/blog",
