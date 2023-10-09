@@ -1,8 +1,15 @@
-# React + Vite
+# Celebrate Hub Event Management React Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## [ Live Website Link](https://assignment-9-d5747.web.app)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- This Celebrate Hub Event Management Website Created By React js and Tailwind css.
+- This website have login page and registration page.
+- User can login and register
+- For login and register use firebase Auth
+- Also have google and github login
+- Input filed is validated
+- Show sweet alert on successfully login and registrations
+- Show error message if any work
+- Full Website is responsive
+- Scroll animation in the website
+- Here have private route, if user login then the private route is visible. Otherwise without login user can't visits private route.
