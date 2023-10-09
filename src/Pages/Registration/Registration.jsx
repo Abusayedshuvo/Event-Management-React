@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
 import Swal from "sweetalert2";
 import { updateProfile } from "firebase/auth";
+import { Helmet } from "react-helmet-async";
 
 const Registration = () => {
   const { createUser } = useContext(AuthContext);
@@ -38,6 +39,9 @@ const Registration = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Registration</title>
+      </Helmet>
       <div className="min-h-[80vh] bg-base-200">
         <h2 className="text-center text-5xl font-semibold py-10 lg:py-16">
           Registration
