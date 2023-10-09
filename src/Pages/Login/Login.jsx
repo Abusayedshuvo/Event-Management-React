@@ -29,6 +29,7 @@ const Login = () => {
     googleLogin()
       .then(() => {
         Swal.fire("Google Login Success ful!", "", "success");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         setError(error.message);
@@ -85,13 +86,16 @@ const Login = () => {
               </button>
             </div>
           </form>
-          <div className="px-10 py-4 text-center space-x-3">
-            <button onClick={handleGoogleLogin} className="btn">
-              Google
-            </button>
-            <button onClick={handleGithubLogin} className="btn">
-              GitHub
-            </button>
+          <div className="px-10 py-4 mb-3 flex justify-between items-center ">
+            <span className="font-semibold">Login With</span>
+            <div className="space-x-3">
+              <button onClick={handleGoogleLogin} className="btn">
+                Google
+              </button>
+              <button onClick={handleGithubLogin} className="btn">
+                GitHub
+              </button>
+            </div>
           </div>
 
           <div className="px-10 pb-10">

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import About from "../../components/About/About";
 import { Helmet } from "react-helmet-async";
+import WhyChooseUs from "../../components/whyChooseUs/WhyChooseUs";
 
 const AboutPage = () => {
   return (
@@ -20,6 +21,7 @@ const AboutPage = () => {
         </div>
       </div>
       <About></About>
+      <WhyChooseUs></WhyChooseUs>
     </>
   );
 };

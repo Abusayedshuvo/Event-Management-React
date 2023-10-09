@@ -71,12 +71,17 @@ const Navbar = () => {
           <div className="navbar-end">
             {user ? (
               <>
-                <p className="pe-3 font-medium">{user?.displayName}</p>
-                <img
-                  className="w-10 h-10 rounded-full"
-                  src={user?.photoURL}
-                  alt=""
-                />
+                {user?.displayName && (
+                  <p className="pe-3 font-medium">{user?.displayName}</p>
+                )}
+                {user?.photoURL && (
+                  <img
+                    className="w-10 h-10 rounded-full"
+                    src={user?.photoURL}
+                    alt=""
+                  />
+                )}
+
                 <button onClick={handleLogOut} className="btn ms-3">
                   Log Out
                 </button>
