@@ -12,7 +12,11 @@ import moment from "moment/moment";
 
 const Footer = () => {
   return (
-    <div className="bg-slate-100 py-20">
+    <div
+      className="bg-slate-100 py-20 px-4 lg:px-0"
+      data-aos="fade-up"
+      data-aos-duration="2200"
+    >
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div>

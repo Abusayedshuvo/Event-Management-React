@@ -4,13 +4,21 @@ const About = () => {
   return (
     <div className="container mx-auto py-20">
       <div className="grid lg:grid-cols-5 gap-8">
-        <div className="relative col-span-2">
+        <div
+          className="relative col-span-2 hidden md:block"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+        >
           <div className="img p-10">
             <img src={aboutImg} alt="" />
           </div>
         </div>
         <div className="col-span-3 my-auto">
-          <div className="ps-10 mt-10 md:mt-0">
+          <div
+            className="ps-10 mt-10 md:mt-0"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
             <h2 className="text-5xl font-semibold mb-5">Our Story</h2>
             <p className="text-3xl mb-5">Crafting Moments, Creating Memories</p>
             <p className="mb-3">

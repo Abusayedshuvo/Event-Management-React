@@ -5,7 +5,11 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const Service = ({ service }) => {
   const { id, name, image, price, shortDescription, buttonText } = service;
   return (
-    <div>
+    <div
+      className="flex flex-col-reverse md:block"
+      data-aos="fade-up"
+      data-aos-duration="1800"
+    >
       <img src={image} alt="" />
       <div className="bg-slate-100 p-5 space-y-4">
         <p className="text-[#f4a492] text-2xl font-semibold">{price}</p>

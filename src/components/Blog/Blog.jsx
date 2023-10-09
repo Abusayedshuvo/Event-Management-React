@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 const Blog = () => {
   return (
-    <div className="container mx-auto mb-20">
+    <div className="container mx-auto mb-20 px-4 lg:px-0">
       <h2 className="text-5xl font-semibold text-center mb-10">Latest Blog</h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <div className="relative">
+        <div className="relative" data-aos="fade-up" data-aos-duration="1500">
           <img src="https://i.ibb.co/FnLgZhj/06.jpg" alt="" />
           <p className="text-2xl font-semibold my-5">
             5 Ideas for Fun Family Activities
@@ -28,7 +28,7 @@ const Blog = () => {
             </span>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative" data-aos="fade-up" data-aos-duration="2000">
           <img src="https://i.ibb.co/84d4k8J/05.jpg" alt="" />
           <p className="text-2xl font-semibold my-5">Best Event Ticket Deals</p>
           <p>

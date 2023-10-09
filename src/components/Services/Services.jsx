@@ -4,7 +4,7 @@ import Service from "./Service";
 const Services = () => {
   const services = useLoaderData();
   return (
-    <div className="container mx-auto py-20">
+    <div className="container mx-auto py-20 px-4 lg:px-0">
       <h2 className="text-5xl font-semibold text-center mb-10">Our Services</h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {services.events.map((service) => (

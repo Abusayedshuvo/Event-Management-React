@@ -77,9 +77,7 @@ const Navbar = () => {
                   src={user?.photoURL}
                   alt=""
                 />
-                {console.log(user)}
-                {console.log(user.photoURL)}
-                <button onClick={handleLogOut} className="btn ">
+                <button onClick={handleLogOut} className="btn ms-3">
                   Log Out
                 </button>
               </>
